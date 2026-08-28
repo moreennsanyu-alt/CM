@@ -36,7 +36,7 @@ jobs:
 
     # Install templates
     - name: Execute unit tests
-      run: dotnet new install DevExpress.XAF.ProjectTemplates
+      run: dotnet new install DevExpress.XAF.ProjectTemplates::24.2.15
 
     - name: Execute unit tests
       run: dotnet new dx.xaf -h
