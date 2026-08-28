@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicManager.E2E.Tests", "ClinicManager.E2E.Tests\ClinicManager.E2E.Tests.csproj", "{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicManager.MiddleTier", "ClinicManager.MiddleTier\ClinicManager.MiddleTier.csproj", "{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicManager.Module", "ClinicManager.Module\ClinicManager.Module.csproj", "{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicManager.Win", "ClinicManager.Win\ClinicManager.Win.csproj", "{870FC7A6-73BD-4D15-916A-9098D0565F9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9151FB7-DB7D-4E7B-82C3-9D97207AF5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404CE2B5-9614-42CA-AE45-5AE2FE0760D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82CD78D3-EC51-497E-A19E-6EB2039A5B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870FC7A6-73BD-4D15-916A-9098D0565F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870FC7A6-73BD-4D15-916A-9098D0565F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870FC7A6-73BD-4D15-916A-9098D0565F9E}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{870FC7A6-73BD-4D15-916A-9098D0565F9E}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{870FC7A6-73BD-4D15-916A-9098D0565F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870FC7A6-73BD-4D15-916A-9098D0565F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71B689A1-6A38-4900-AC01-3C405A3F7035}
+	EndGlobalSection
+EndGlobal
