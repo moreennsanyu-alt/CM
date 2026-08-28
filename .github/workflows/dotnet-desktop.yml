@@ -39,7 +39,7 @@ jobs:
       run: dotnet new install DevExpress.XAF.ProjectTemplates::24.2.15
 
     - name: Execute unit tests
-      run: dotnet new dx.xaf -n ClinicManager -o ./Src --dry-run --no-update-check --type solution -db sqlite -orm XPO -p Win -e2e -s MiddleTier|Password -m All
+      run: dotnet new dx.xaf -n ClinicManager -o ./Src --dry-run --no-update-check --type solution -db sqlite -orm XPO -p Win -e2e -s MiddleTier -m All
 
           
     - name: Create Pull Request
