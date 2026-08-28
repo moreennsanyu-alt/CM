@@ -53,21 +53,16 @@ jobs:
           
         # PR Content
         title: "Paket Dependency Update"
-        body: |
-         ##Manual Update Triggered
-           This update was triggered manually by @${{ github.actor }}.
-           **Changes:**
-           - `paket.lock` (Updated versions)
-           - `paket.references` (If applicable)
-            
+        body: "Hello"
+      
         # COMMIT IDENTITY CONFIGURATION
         # This maps the commit to the user who pressed the button
-          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
-          committer: GitHub <noreply@github.com>
-          commit-message: "chore(deps): update paket dependencies"
+        author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com>
+        committer: GitHub <noreply@github.com>
+        commit-message: "chore(deps): update paket dependencies"
           
-          # Labels
-          labels: |
+        # Labels
+        labels: |
             dependencies
             manual-trigger
       
