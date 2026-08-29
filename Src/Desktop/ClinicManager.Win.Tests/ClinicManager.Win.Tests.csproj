@@ -15,12 +15,10 @@
     <PackageReference Include="NUnit3TestAdapter" />
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     <PackageReference Include="Moq" />
-    <PackageReference Include="FluentAssertions" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ClinicManager.Shell\ClinicManager.Shell.csproj" />
-    <ProjectReference Include="..\ClinicManager.Testing\ClinicManager.Testing.csproj" />
+    <ProjectReference Include="..\ClinicManager.Win\ClinicManager.Win.csproj" />
   </ItemGroup>
 
 </Project>
