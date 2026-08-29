@@ -1,0 +1,12 @@
+<Window x:Class="ClinicManager.Shell.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        Title="Clinic Manager" Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" prism:RegionManager.RegionName="MenuRegion" />
+        <StatusBar DockPanel.Dock="Bottom" prism:RegionManager.RegionName="StatusBarRegion" />
+        <ContentControl prism:RegionManager.RegionName="MainRegion" />
+    </DockPanel>
+</Window>

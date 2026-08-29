@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Entry point: merges every shared style dictionary. Referenced from App.xaml in Shell. -->
+    <ResourceDictionary.MergedDictionaries>
+        <!-- <ResourceDictionary Source="/ClinicManager.Presentation;component/Styles/Colors.xaml" /> -->
+        <!-- <ResourceDictionary Source="/ClinicManager.Presentation;component/Styles/Typography.xaml" /> -->
+        <!-- <ResourceDictionary Source="/ClinicManager.Presentation;component/Styles/ButtonStyles.xaml" /> -->
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>
