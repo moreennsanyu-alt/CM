@@ -10,20 +10,6 @@
     <PackageReference Include="Prism.DryIoc" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
-    <ProjectReference Include="..\ClinicManager.Presentation\ClinicManager.Presentation.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Patients\ClinicManager.Patients.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Scheduling\ClinicManager.Scheduling.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Billing\ClinicManager.Billing.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.ClinicalRecords\ClinicManager.ClinicalRecords.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Pharmacy\ClinicManager.Pharmacy.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Inventory\ClinicManager.Inventory.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Staff\ClinicManager.Staff.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Reception\ClinicManager.Reception.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Reporting\ClinicManager.Reporting.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Notifications\ClinicManager.Notifications.csproj" />
-    <ProjectReference Include="..\Modules\ClinicManager.Authentication\ClinicManager.Authentication.csproj" />
-  </ItemGroup>
+
 
 </Project>
