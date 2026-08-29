@@ -185,12 +185,23 @@ class Build : FalloutBuild
         .Executes(() =>
         {
             var testProjectNames = new[] { "ClinicManager.Core.Tests",
-                                           "ClinicManager.Win.Tests",
-                                           "Application.FunctionalTests",
-                                           "Domain.UnitTests",
-                                           "Application.UnitTests",
-                                           "Infrastructure.IntergrationTests",
-                        
+                                           "ClinicManager.Shell.Tests",
+                                           //"Application.FunctionalTests",
+                                           //"Domain.UnitTests",
+                                           //"Application.UnitTests",
+                                           //"Infrastructure.IntergrationTests",
+										   ClinicManager.Presentation.Tests,
+										   ClinicManager.Patients.Tests,
+										   ClinicManager.Scheduling.Tests,
+										   ClinicManager.Billing.Tests,
+										   ClinicManager.ClinicalRecords.Tests,
+										   ClinicManager.Pharmacy.Tests,
+										   ClinicManager.Inventory.Tests,
+										   ClinicManager.Staff.Tests,
+										   ClinicManager.Reception.Tests,
+										   ClinicManager.Reporting.Tests,
+										   ClinicManager.Notifications.Tests,
+										   ClinicManager.Authentication.Tests         
             };
 
             var unitTestProjects = testProjectNames.Select(x => Solution.GetAllProjects(x).First());
