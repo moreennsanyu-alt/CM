@@ -190,18 +190,18 @@ class Build : FalloutBuild
                                            //"Domain.UnitTests",
                                            //"Application.UnitTests",
                                            //"Infrastructure.IntergrationTests",
-										   ClinicManager.Presentation.Tests,
-										   ClinicManager.Patients.Tests,
-										   ClinicManager.Scheduling.Tests,
-										   ClinicManager.Billing.Tests,
-										   ClinicManager.ClinicalRecords.Tests,
-										   ClinicManager.Pharmacy.Tests,
-										   ClinicManager.Inventory.Tests,
-										   ClinicManager.Staff.Tests,
-										   ClinicManager.Reception.Tests,
-										   ClinicManager.Reporting.Tests,
-										   ClinicManager.Notifications.Tests,
-										   ClinicManager.Authentication.Tests         
+										   "ClinicManager.Presentation.Tests",
+										   "ClinicManager.Patients.Tests",
+										   "ClinicManager.Scheduling.Tests",
+										   "ClinicManager.Billing.Tests",
+										   "ClinicManager.ClinicalRecords.Tests",
+										   "ClinicManager.Pharmacy.Tests",
+										   "ClinicManager.Inventory.Tests",
+										   "ClinicManager.Staff.Tests",
+										   "ClinicManager.Reception.Tests",
+										   "ClinicManager.Reporting.Tests",
+										   "ClinicManager.Notifications.Tests",
+										   "ClinicManager.Authentication.Tests"         
             };
 
             var unitTestProjects = testProjectNames.Select(x => Solution.GetAllProjects(x).First());
