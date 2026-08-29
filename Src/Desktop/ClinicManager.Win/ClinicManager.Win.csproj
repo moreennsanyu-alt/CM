@@ -4,8 +4,6 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <RootNamespace>ClinicManager.Shell</RootNamespace>
-    <AssemblyName>ClinicManager.Shell</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
