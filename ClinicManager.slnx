@@ -17,9 +17,9 @@
   </Folder>
   <Folder Name="/Tests/">
     <Project Path="Src/Desktop.Tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
-    <Project Path="test/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
-    <Project Path="test/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
-    <Project Path="test/ClinicManager.Shell.Tests/ClinicManager.Shell.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Shell.Tests/ClinicManager.Shell.Tests.csproj" />
     <Folder Name="/Tests/Modules/">
       <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Patients.Tests/ClinicManager.Patients.Tests.csproj" />
       <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Scheduling.Tests/ClinicManager.Scheduling.Tests.csproj" />
