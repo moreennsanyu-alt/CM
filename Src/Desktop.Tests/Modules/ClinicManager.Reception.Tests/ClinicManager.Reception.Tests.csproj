@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Modules\ClinicManager.Reception\ClinicManager.Reception.csproj" />
+    <ProjectReference Include="..\..\..\Desktop\Modules\ClinicManager.Reception\ClinicManager.Reception.csproj" />
     <ProjectReference Include="..\..\ClinicManager.Testing\ClinicManager.Testing.csproj" />
   </ItemGroup>
 
