@@ -1,39 +1,10 @@
 <Solution>
-  <Project Path="Src/Desktop/ClinicManager.Core/ClinicManager.Core.csproj" />
-  <Project Path="Src/Desktop/ClinicManager.Presentation/ClinicManager.Presentation.csproj" />
-  <Project Path="Src/Desktop/ClinicManager.Shell/ClinicManager.Shell.csproj" />
-  <Folder Name="/Modules/">
-    <Project Path="Src/Desktop/Modules/ClinicManager.Patients/ClinicManager.Patients.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Scheduling/ClinicManager.Scheduling.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Billing/ClinicManager.Billing.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.ClinicalRecords/ClinicManager.ClinicalRecords.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Pharmacy/ClinicManager.Pharmacy.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Inventory/ClinicManager.Inventory.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Staff/ClinicManager.Staff.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Reception/ClinicManager.Reception.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Reporting/ClinicManager.Reporting.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Notifications/ClinicManager.Notifications.csproj" />
-    <Project Path="Src/Desktop/Modules/ClinicManager.Authentication/ClinicManager.Authentication.csproj" />
-  </Folder>
-  <Folder Name="/Tests/">
-    <Project Path="Src/Desktop.Tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
-    <Project Path="Src/Desktop.Tests/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
-    <Project Path="Src/Desktop.Tests/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
-    <Project Path="Src/Desktop.Tests/ClinicManager.Shell.Tests/ClinicManager.Shell.Tests.csproj" />
-    <Folder Name="/Tests/Modules/">
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Patients.Tests/ClinicManager.Patients.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Scheduling.Tests/ClinicManager.Scheduling.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Billing.Tests/ClinicManager.Billing.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.ClinicalRecords.Tests/ClinicManager.ClinicalRecords.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Pharmacy.Tests/ClinicManager.Pharmacy.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Inventory.Tests/ClinicManager.Inventory.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Staff.Tests/ClinicManager.Staff.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Reception.Tests/ClinicManager.Reception.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Reporting.Tests/ClinicManager.Reporting.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Notifications.Tests/ClinicManager.Notifications.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/Modules/ClinicManager.Authentication.Tests/ClinicManager.Authentication.Tests.csproj" />
-    </Folder>
-  </Folder>
+    <Folder Name="/Desktop/">
+        <Project Path="Src/Desktop/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj" />
+        <Project Path="Src/Desktop/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
+        <Project Path="Src/Desktop/ClinicManager.Win/ClinicManager.Win.csproj" />
+    </Folder>   
+
   <Folder Name="/Solution Items/">
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
