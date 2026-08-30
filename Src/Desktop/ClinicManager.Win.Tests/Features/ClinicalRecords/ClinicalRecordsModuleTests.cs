@@ -1,4 +1,4 @@
-using ClinicManager.ClinicalRecords;
+using ClinicManager.Win.Features.ClinicalRecords;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
