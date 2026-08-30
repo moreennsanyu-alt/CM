@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace ClinicManager.Shell.Views;
+namespace ClinicManager.Win.Views;
 
 public partial class MainWindow : Window
 {
