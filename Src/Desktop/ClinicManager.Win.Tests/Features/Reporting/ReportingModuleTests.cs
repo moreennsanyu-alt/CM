@@ -1,4 +1,4 @@
-using ClinicManager.Reporting;
+using ClinicManager.Win.Features.Reporting;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
