@@ -1,4 +1,12 @@
 <Solution>
+    <Configurations>
+        <Platform Name="Any CPU" />
+        <BuildType Name="Debug" />
+        <BuildType Name="Release" />
+        <BuildType Name="E2ETests" />
+        <BuildType Name="CI" />
+    </Configurations>
+
     <Folder Name="/Desktop/">
         <Project Path="Src/Desktop/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj" />
         <Project Path="Src/Desktop/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
@@ -10,5 +18,10 @@
     <File Path="Directory.Packages.props" />
     <File Path="test/Directory.Build.props" />
     <File Path=".gitignore" />
+  </Folder>
+    <Folder Name="/Installers/">
+    <Project Path="Src/ClinicManager.Setup/ClinicManager.Setup.csproj">
+      <Build Solution="*|*" Project="false" />
+    </Project>
   </Folder>
 </Solution>
