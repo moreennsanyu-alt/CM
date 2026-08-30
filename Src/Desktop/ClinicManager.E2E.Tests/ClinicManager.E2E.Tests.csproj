@@ -2,8 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
+    <EnableNUnitRunner>true</EnableNUnitRunner>
+    <OutputType>Exe</OutputType>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="NUnit" />
