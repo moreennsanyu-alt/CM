@@ -1,16 +1,16 @@
 using System.Windows;
 using ClinicManager.Shell.Views;
-using ClinicManager.Patients;
-using ClinicManager.Scheduling;
-using ClinicManager.Billing;
-using ClinicManager.ClinicalRecords;
-using ClinicManager.Pharmacy;
-using ClinicManager.Inventory;
-using ClinicManager.Staff;
-using ClinicManager.Reception;
-using ClinicManager.Reporting;
-using ClinicManager.Notifications;
-using ClinicManager.Authentication;
+using ClinicManager.Win.Features.Patients;
+using ClinicManager.Win.Features.Scheduling;
+using ClinicManager.Win.Features.Billing;
+using ClinicManager.Win.Features.ClinicalRecords;
+using ClinicManager.Win.Features.Pharmacy;
+using ClinicManager.Win.Features.Inventory;
+using ClinicManager.Win.Features.Staff;
+using ClinicManager.Win.Features.Reception;
+using ClinicManager.Win.Features.Reporting;
+using ClinicManager.Win.Features.Notifications;
+using ClinicManager.Win.Features.SchedulingAuthentication;
 using Prism.Ioc;
 using Prism.Modularity;
 
