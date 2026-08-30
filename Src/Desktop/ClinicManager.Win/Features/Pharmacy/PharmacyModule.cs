@@ -1,1 +1,23 @@
 
+using ClinicManager.Core.Constants;
+using Prism.Ioc;
+using Prism.Modularity;
+
+namespace ClinicManager.Win.Features.Pharmacy;
+
+public class PharmacyModule : IModule
+{
+    public void RegisterTypes(IContainerRegistry containerRegistry)
+    {
+        // Example:
+        // containerRegistry.RegisterForNavigation<InventoryView, InventoryViewModel>();
+        // containerRegistry.Register<IInventoryService, InventoryService>();
+    }
+
+    public void OnInitialized(IContainerProvider containerProvider)
+    {
+        // Example:
+        // var regionManager = containerProvider.Resolve<IRegionManager>();
+        // regionManager.RequestNavigate(RegionNames.MainRegion, nameof(InventoryView));
+    }
+}
