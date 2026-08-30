@@ -3,9 +3,9 @@
 
     <!-- Entry point: merges every shared style dictionary. Referenced from App.xaml in Shell. -->
     <ResourceDictionary.MergedDictionaries>
-        <!-- <ResourceDictionary Source="/ClinicManager.Presentation;component/Styles/Colors.xaml" /> -->
-        <!-- <ResourceDictionary Source="/ClinicManager.Presentation;component/Styles/Typography.xaml" /> -->
-        <!-- <ResourceDictionary Source="/ClinicManager.Presentation;component/Styles/ButtonStyles.xaml" /> -->
+        <!-- <ResourceDictionary Source="/ClinicMgr;component/Presentation/Styles/Colors.xaml" /> -->
+        <!-- <ResourceDictionary Source="/ClinicMgr;component/Presentation/Styles/Typography.xaml" /> -->
+        <!-- <ResourceDictionary Source="/ClinicMgr;component/Presentation/Styles/ButtonStyles.xaml" /> -->
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
