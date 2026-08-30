@@ -1,4 +1,4 @@
-using ClinicManager.Billing;
+using ClinicManager.Win.Features.Billing;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
@@ -6,7 +6,7 @@ using NUnit.Framework;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Billing.Tests;
+namespace ClinicManager.Win.Features.Billing.Tests;
 
 [TestFixture]
 public class BillingModuleTests : PrismTestBase
