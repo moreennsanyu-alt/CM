@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="NUnit" />
+    <PackageReference Include="FluentAssertions" />
     <PackageReference Include="NUnit.Analyzers">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
