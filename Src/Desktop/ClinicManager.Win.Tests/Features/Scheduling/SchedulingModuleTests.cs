@@ -1,4 +1,4 @@
-using ClinicManager.Scheduling;
+using ClinicManager.Win.Features.Scheduling;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
