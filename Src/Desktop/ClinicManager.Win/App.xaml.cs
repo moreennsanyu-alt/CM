@@ -15,7 +15,7 @@ using ClinicManager.Win.Features.Authentication;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.win;
+namespace ClinicManager.Win;
 
 public partial class App
 {
