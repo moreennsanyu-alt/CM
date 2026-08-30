@@ -59,7 +59,7 @@ class Build : FalloutBuild
 
 
     [Solution(GenerateProjects = true)]
-    readonly Solution Solution;
+    readonly Fallout.Common.ProjectModel.Solution Solution;
 
     [Required]
     [NerdbankGitVersioning()]
