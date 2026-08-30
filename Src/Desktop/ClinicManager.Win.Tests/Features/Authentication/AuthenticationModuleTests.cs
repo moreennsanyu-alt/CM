@@ -1,4 +1,4 @@
-using ClinicManager.Authentication;
+using ClinicManager.Win.Features.Authentication;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
@@ -6,7 +6,7 @@ using NUnit.Framework;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Authentication.Tests;
+namespace ClinicManager.Win.Features.Authentication.Tests;
 
 [TestFixture]
 public class AuthenticationModuleTests : PrismTestBase
