@@ -2,7 +2,7 @@ using ClinicManager.Core.Constants;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Inventory;
+namespace ClinicManager.Win.Features.Inventory;
 
 public class InventoryModule : IModule
 {
