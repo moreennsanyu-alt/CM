@@ -1,4 +1,4 @@
-using ClinicManager.Inventory;
+using ClinicManager.Win.Features.Inventory;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
