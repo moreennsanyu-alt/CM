@@ -10,7 +10,8 @@ using ClinicManager.Win.Features.Staff;
 using ClinicManager.Win.Features.Reception;
 using ClinicManager.Win.Features.Reporting;
 using ClinicManager.Win.Features.Notifications;
-using ClinicManager.Win.Features.SchedulingAuthentication;
+using ClinicManager.Win.Features.Scheduling;
+using ClinicManager.Win.Features.Authentication;
 using Prism.Ioc;
 using Prism.Modularity;
 
