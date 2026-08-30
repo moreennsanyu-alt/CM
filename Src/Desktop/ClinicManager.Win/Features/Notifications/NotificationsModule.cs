@@ -2,7 +2,7 @@ using ClinicManager.Core.Constants;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Notifications;
+namespace ClinicManager.Win.Features.Notifications;
 
 public class NotificationsModule : IModule
 {
