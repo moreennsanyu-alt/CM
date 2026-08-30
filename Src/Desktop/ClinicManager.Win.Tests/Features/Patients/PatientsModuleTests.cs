@@ -1,4 +1,4 @@
-using ClinicManager.Patients;
+using ClinicManager.Win.Features.Patients;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
