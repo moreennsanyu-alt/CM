@@ -2,7 +2,7 @@ using ClinicManager.Core.Constants;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Patients;
+namespace ClinicManager.Win.Features.Patients;
 
 public class PatientsModule : IModule
 {
