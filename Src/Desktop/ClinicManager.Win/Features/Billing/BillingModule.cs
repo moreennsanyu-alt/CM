@@ -2,7 +2,7 @@ using ClinicManager.Core.Constants;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Billing;
+namespace ClinicManager.Win.Features.Billing;
 
 public class BillingModule : IModule
 {
