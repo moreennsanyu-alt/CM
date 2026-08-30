@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Fallout.Solutions;
 using Fallout.Common;
 using Fallout.Common.CI.GitHubActions;
 using Fallout.Common.Execution;
