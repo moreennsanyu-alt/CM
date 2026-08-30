@@ -2,7 +2,7 @@ using ClinicManager.Core.Constants;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Authentication;
+namespace ClinicManager.Win.Features.Authentication;
 
 public class AuthenticationModule : IModule
 {
