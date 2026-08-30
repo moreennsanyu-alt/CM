@@ -1,4 +1,4 @@
-using ClinicManager.Notifications;
+using ClinicManager.Win.Features.Notifications;
 using ClinicManager.Testing.Fixtures;
 using FluentAssertions;
 using Moq;
