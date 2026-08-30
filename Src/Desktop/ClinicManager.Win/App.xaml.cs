@@ -1,5 +1,5 @@
 using System.Windows;
-using ClinicManager.Shell.Views;
+using ClinicManager.Win.Views;
 using ClinicManager.Win.Features.Patients;
 using ClinicManager.Win.Features.Scheduling;
 using ClinicManager.Win.Features.Billing;
@@ -14,7 +14,7 @@ using ClinicManager.Win.Features.SchedulingAuthentication;
 using Prism.Ioc;
 using Prism.Modularity;
 
-namespace ClinicManager.Shell;
+namespace ClinicManager.win;
 
 public partial class App
 {
