@@ -67,6 +67,7 @@
     <PackageVersion Include="DevExpress.Wpf.Controls" Version="24.2.15" />
     <PackageVersion Include="DevExpress.Wpf.Core" Version="24.2.15" />
     <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="24.2.15" />
+    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Dark" Version="24.2.15" />
 
     <!-- System / Microsoft -->
     <PackageVersion Include="System.Text.Json" Version="9.0.19" />
