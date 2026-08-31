@@ -35,6 +35,6 @@
     <Exec Command="cd .&#xD;&#xA;set ide=true&#xD;&#xA;&quot;$(TargetPath)&quot;" />
   </Target>
   <Target Name="PublishBeforeBuild" BeforeTargets="CoreCompile">
-    <MSBuild Projects="..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" Targets="Publish" Properties="Configuration=$(Configuration);\&#xD;\n                         PublishDir=$(DesktopPu[...]" />
+    <MSBuild Projects="..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" Targets="Publish" Properties="Configuration=$(Configuration);\&#xD;\nPublishDir=$(DesktopPublishDir)" />
   </Target>
 </Project>
