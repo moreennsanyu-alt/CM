@@ -36,7 +36,7 @@ class Build : FalloutBuild
        - Microsoft VSCode           https://fallout.build/vscode
     */
 
-    public static int Main() => Execute<Build>( x => x.Tests);
+    public static int Main() => Execute<Build>( x => x.Installers);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.CI;
