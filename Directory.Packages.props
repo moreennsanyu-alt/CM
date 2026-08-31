@@ -91,7 +91,6 @@
          CORE & LICENSING
          ======================================== -->
     <PackageVersion Include="Syncfusion.Licensing" Version="$(SyncfusionVersion)" />
-    <PackageVersion Include="Syncfusion.Core" Version="$(SyncfusionVersion)" />
     <PackageVersion Include="Syncfusion.Shared.WPF" Version="$(SyncfusionVersion)" />
     
     <!-- ========================================
