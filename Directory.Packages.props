@@ -4,6 +4,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
     <PrismVersion>8.1.97</PrismVersion>
+    <SyncfusionVersion>34.2.5</SyncfusionVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,57 +19,7 @@
     <PackageVersion Include="Bogus" Version="35.6.1" />
 
     <PackageVersion Include="ThisAssembly.Constants" Version="2.1.5" />
-        <!-- DevExpress -->
-    <PackageVersion Include="DevExpress.Wpf.Themes.All" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Scheduling" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.DataAccess" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Document.Processor" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Drawing.Skia" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.RichEdit.Export" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Scaffolding.Core" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Scaffolding.EFCore" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Accordion" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Carousel" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Charts" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Core.Extensions" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Diagram" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Dialogs" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Docking" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.DocumentViewer.Core" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.ExpressionEditor" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Gantt" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Gauges" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Grid" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.LayoutControl" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Map" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.NavBar" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PdfViewer" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PivotGrid" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Printing" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PrismAdapters" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PropertyGrid" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Ribbon" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.RichEdit" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.SchedulingReporting" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.SpellChecker" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Spreadsheet" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.TreeMap" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.TypedStyles" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Mvvm" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Mvvm.CodeGenerators" Version="22.1.1" />
-    <PackageVersion Include="DevExpress.Wpf.ThemesLW" Version="24.2.15"/>
 
-
-    <!-- Added DevExpress transitive packages -->
-    <PackageVersion Include="DevExpress.Data" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Xpo" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Data.Desktop" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Images" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Controls" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Core" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="24.2.15" />
-
-    <!-- System / Microsoft -->
     <PackageVersion Include="System.Text.Json" Version="9.0.19" />
     <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
     <PackageVersion Include="System.Collections.Immutable" Version="9.0.19" />
@@ -136,7 +87,144 @@
 
     <PackageVersion Include="Nerdbank.GitVersioning" Version="3.10.91" />
   
+    <!-- ========================================
+         CORE & LICENSING
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.Licensing" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Core" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Shared.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         DOCUMENT PROCESSING & VIEWERS
+         ======================================== -->
+    <!-- Word Documents -->
+    <PackageVersion Include="Syncfusion.DocIO.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.DocIO.Base" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.DocIO.Appearance" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.DocViewer.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- Excel/Spreadsheet Documents -->
+    <PackageVersion Include="Syncfusion.XlsIO.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.XlsIO.Base" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.XlsIO.FlowAnalysis" Version="$(SyncfusionVersion)" />
+    
+    <!-- PDF Processing & Viewing -->
+    <PackageVersion Include="Syncfusion.Pdf.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Pdf.Base" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.PdfViewer.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- PowerPoint/Presentation -->
+    <PackageVersion Include="Syncfusion.Presentation.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Presentation.Base" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         DATA GRIDS & TABLES
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfDataGrid.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfTreeGrid.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfPivotGrid.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfDataPager.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Data.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.DataSource.Portable" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         CHARTS & VISUALIZATION
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfChart.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfGauge.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfMap.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfHeatMap.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfSunburstChart.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         TEXT & DOCUMENT CONTROLS
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.RichTextEditor.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.TextInputLayout.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         NAVIGATION & LAYOUT
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.Tools.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfRibbon.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfRadialMenu.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfAccordion.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfNavigationDrawer.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfTabControlExt.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         SCHEDULING & CALENDAR
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfScheduler.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfCalendar.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfDatePicker.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfTimePicker.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         DIAGRAMMING & DESIGN
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfDiagram.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         SPECIALIZED CONTROLS
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfKanban.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfRangeSlider.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfColorPicker.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfBusyIndicator.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfProgressBar.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfNumericUpDown.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfMaskedTextBox.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfComboBox.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfAutoComplete.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         THEMING & STYLING
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfSkinManager.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.MaterialLight.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.MaterialDark.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.FluentLight.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.FluentDark.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.Office2019Colorful.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.Office2016Colorful.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.Office2016White.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.Office2016BlackGray.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.Windows11Light.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.Themes.Windows11Dark.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         REPORTING
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.Reporting.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.ReportWriter" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         OLTP & DATABASE
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.DataSource.Portable" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.OlapBase.Base" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         UTILITY & HELPERS
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.CompressedStream" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.ExcelToPdfConverter.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.EJ2.AspNet.Core" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         INPUT VALIDATION & FORMS
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfInput.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfFormControl.WPF" Version="$(SyncfusionVersion)" />
+    
+    <!-- ========================================
+         NOTIFICATION & POPUP
+         ======================================== -->
+    <PackageVersion Include="Syncfusion.SfNotification.WPF" Version="$(SyncfusionVersion)" />
+    <PackageVersion Include="Syncfusion.SfPopup.WPF" Version="$(SyncfusionVersion)" />
+    
   </ItemGroup>
 
 </Project>
-
