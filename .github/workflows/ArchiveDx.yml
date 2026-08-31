@@ -31,7 +31,7 @@ jobs:
       - name: Zip DevExpress Packages
         shell: pwsh
         env:
-          ZIP_PWD: ${{ secrets.DxPass }}
+          ZIP_PWD: ${{ secrets.DXPASS }}
         run: |
           $packageName = "dx.zip"
           
