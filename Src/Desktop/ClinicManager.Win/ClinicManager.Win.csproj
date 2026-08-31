@@ -10,99 +10,45 @@
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc" />
 
-    <PackageReference Include="Syncfusion.Licensing" />
-    <PackageReference Include="Syncfusion.Shared.WPF" />
-    
-    <!-- Document Processing & Viewers -->
-    <PackageReference Include="Syncfusion.DocIO.WPF" />
-    <PackageReference Include="Syncfusion.DocIO.Base" />
-    <PackageReference Include="Syncfusion.DocIO.Appearance" />
-    <PackageReference Include="Syncfusion.DocViewer.WPF" />
-    
-    <PackageReference Include="Syncfusion.XlsIO.WPF" />
-    <PackageReference Include="Syncfusion.XlsIO.Base" />
-    <PackageReference Include="Syncfusion.XlsIO.FlowAnalysis" />
-    
-    <PackageReference Include="Syncfusion.Pdf.WPF" />
-    <PackageReference Include="Syncfusion.Pdf.Base" />
-    <PackageReference Include="Syncfusion.PdfViewer.WPF" />
-    
-    <PackageReference Include="Syncfusion.Presentation.WPF" />
-    <PackageReference Include="Syncfusion.Presentation.Base" />
-    
-    <!-- Data Grids & Tables -->
-    <PackageReference Include="Syncfusion.SfDataGrid.WPF" />
-    <PackageReference Include="Syncfusion.SfTreeGrid.WPF" />
-    <PackageReference Include="Syncfusion.SfPivotGrid.WPF" />
-    <PackageReference Include="Syncfusion.SfDataPager.WPF" />
-    <PackageReference Include="Syncfusion.Data.WPF" />
-    
-    <!-- Charts & Visualization -->
-    <PackageReference Include="Syncfusion.SfChart.WPF" />
-    <PackageReference Include="Syncfusion.SfGauge.WPF" />
-    <PackageReference Include="Syncfusion.SfMap.WPF" />
-    <PackageReference Include="Syncfusion.SfHeatMap.WPF" />
-    <PackageReference Include="Syncfusion.SfSunburstChart.WPF" />
-    
-    <!-- Text & Document Controls -->
-    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" />
-    <PackageReference Include="Syncfusion.RichTextEditor.WPF" />
-    <PackageReference Include="Syncfusion.TextInputLayout.WPF" />
-    
-    <!-- Navigation & Layout -->
-    <PackageReference Include="Syncfusion.Tools.WPF" />
-    <PackageReference Include="Syncfusion.SfRibbon.WPF" />
-    <PackageReference Include="Syncfusion.SfRadialMenu.WPF" />
-    <PackageReference Include="Syncfusion.SfAccordion.WPF" />
-    <PackageReference Include="Syncfusion.SfNavigationDrawer.WPF" />
-    <PackageReference Include="Syncfusion.SfTabControlExt.WPF" />
-    
-    <!-- Scheduling & Calendar -->
-    <PackageReference Include="Syncfusion.SfScheduler.WPF" />
-    <PackageReference Include="Syncfusion.SfCalendar.WPF" />
-    <PackageReference Include="Syncfusion.SfDatePicker.WPF" />
-    <PackageReference Include="Syncfusion.SfTimePicker.WPF" />
-    
-    <!-- Diagramming -->
-    <PackageReference Include="Syncfusion.SfDiagram.WPF" />
-    
-    <!-- Specialized Controls -->
-    <PackageReference Include="Syncfusion.SfKanban.WPF" />
-    <PackageReference Include="Syncfusion.SfRangeSlider.WPF" />
-    <PackageReference Include="Syncfusion.SfColorPicker.WPF" />
-    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" />
-    <PackageReference Include="Syncfusion.SfProgressBar.WPF" />
-    <PackageReference Include="Syncfusion.SfNumericUpDown.WPF" />
-    <PackageReference Include="Syncfusion.SfMaskedTextBox.WPF" />
-    <PackageReference Include="Syncfusion.SfComboBox.WPF" />
-    <PackageReference Include="Syncfusion.SfAutoComplete.WPF" />
-    
-    <!-- Theming & Styling -->
-    <PackageReference Include="Syncfusion.SfSkinManager.WPF" />
-    <PackageReference Include="Syncfusion.Themes.MaterialLight.WPF" />
-    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" />
-    <PackageReference Include="Syncfusion.Themes.FluentLight.WPF" />
-    <PackageReference Include="Syncfusion.Themes.FluentDark.WPF" />
-    <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" />
-    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" />
-    
-    <!-- OLTP & Database -->
-    <PackageReference Include="Syncfusion.DataSource.Portable" />
-    <PackageReference Include="Syncfusion.OlapBase.Base" />
-    
-    <!-- Utility & Helpers -->
-    <PackageReference Include="Syncfusion.CompressedStream" />
+    <PackageReference Include="DevExpress.Wpf.Scheduling" />
+    <PackageReference Include="DevExpress.Document.Processor" />
+    <PackageReference Include="DevExpress.Drawing.Skia" />
+    <PackageReference Include="DevExpress.RichEdit.Export" />
+    <PackageReference Include="DevExpress.Wpf.Accordion" />
+    <PackageReference Include="DevExpress.Wpf.Carousel" />
+    <PackageReference Include="DevExpress.Wpf.Charts" />
+    <PackageReference Include="DevExpress.Wpf.Core.Extensions" />
+    <PackageReference Include="DevExpress.Wpf.Diagram" />
+    <PackageReference Include="DevExpress.Wpf.Dialogs" />
+    <PackageReference Include="DevExpress.Wpf.Docking" />
+    <PackageReference Include="DevExpress.Wpf.DocumentViewer.Core" />
+    <PackageReference Include="DevExpress.Wpf.ExpressionEditor" />
+    <PackageReference Include="DevExpress.Wpf.Gauges" />
+    <PackageReference Include="DevExpress.Wpf.Grid" />
+    <PackageReference Include="DevExpress.Wpf.LayoutControl" />
+    <PackageReference Include="DevExpress.Wpf.NavBar" />
+    <PackageReference Include="DevExpress.Wpf.PdfViewer" />
+    <PackageReference Include="DevExpress.Wpf.PivotGrid" />
+    <PackageReference Include="DevExpress.Wpf.Printing" />
+    <PackageReference Include="DevExpress.Wpf.PrismAdapters" />
+    <PackageReference Include="DevExpress.Wpf.PropertyGrid" />
+    <PackageReference Include="DevExpress.Wpf.Ribbon" />
+    <PackageReference Include="DevExpress.Wpf.RichEdit" />
+    <PackageReference Include="DevExpress.Wpf.SchedulingReporting" />
+    <PackageReference Include="DevExpress.Wpf.SpellChecker" />
+    <PackageReference Include="DevExpress.Wpf.Spreadsheet" />
+    <PackageReference Include="DevExpress.Wpf.TypedStyles" />
+    <PackageReference Include="DevExpress.Mvvm" />
+    <PackageReference Include="DevExpress.Mvvm.CodeGenerators" />
+    <PackageReference Include="DevExpress.Wpf.ThemesLW" />
+
+    <!-- DevExpress transitive packages -->
+    <PackageReference Include="DevExpress.Data" />
+    <PackageReference Include="DevExpress.Data.Desktop" />
+    <PackageReference Include="DevExpress.Images" />
+    <PackageReference Include="DevExpress.Wpf.Controls" />
+    <PackageReference Include="DevExpress.Wpf.Core" />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
  
-    <!-- Input Validation & Forms -->
-    <PackageReference Include="Syncfusion.SfInput.WPF" />
-    <PackageReference Include="Syncfusion.SfFormControl.WPF" />
-    
-    <!-- Notification & Popup -->
-    <PackageReference Include="Syncfusion.SfNotification.WPF" />
-    <PackageReference Include="Syncfusion.SfPopup.WPF" />
-    
   </ItemGroup>
-
-
-
-</Project>
+  </Project>
