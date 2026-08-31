@@ -1,0 +1,54 @@
+source https://api.nuget.org/v3/index.json
+
+storage: packages
+strategy: min
+lowest_matching: true
+copy_local:true
+specific_version : false
+framework:netstandard2.0,net9.0,net9.0-windows,net48
+
+
+nuget DevExpress.Wpf 24.2.15
+nuget DevExpress.Wpf.Themes.All 24.2.15
+nuget DevExpress.Wpf.Scheduling 24.2.15
+nuget DevExpress.DataAccess 24.2.15  
+nuget DevExpress.Document.Processor 24.2.15
+nuget DevExpress.Drawing.Skia 24.2.15
+
+nuget DevExpress.RichEdit.Export 24.2.15
+nuget DevExpress.Scaffolding.Core 24.2.15
+nuget DevExpress.Scaffolding.EFCore 24.2.15 24.2.15
+nuget DevExpress.Wpf.Accordion 24.2.15
+nuget DevExpress.Wpf.Carousel 24.2.15
+nuget DevExpress.Wpf.Charts 24.2.15
+nuget DevExpress.Wpf.Core.Extensions 24.2.15
+nuget DevExpress.Wpf.Diagram 24.2.15
+nuget DevExpress.Wpf.Dialogs 24.2.15
+nuget DevExpress.Wpf.Docking 24.2.15
+nuget DevExpress.Wpf.DocumentViewer.Core 24.2.15
+nuget DevExpress.Wpf.ExpressionEditor 24.2.15
+nuget DevExpress.Wpf.Gantt 24.2.15
+nuget DevExpress.Wpf.Gauges 24.2.15
+nuget DevExpress.Wpf.Grid 24.2.15
+nuget DevExpress.Wpf.LayoutControl 24.2.15
+nuget DevExpress.Wpf.Map 24.2.15
+nuget DevExpress.Wpf.NavBar 24.2.15
+nuget DevExpress.Wpf.PdfViewer 24.2.15
+nuget DevExpress.Wpf.PivotGrid 24.2.15
+nuget DevExpress.Wpf.Printing 24.2.15
+nuget DevExpress.Wpf.PrismAdapters 24.2.15
+nuget DevExpress.Wpf.PropertyGrid 24.2.15
+nuget DevExpress.Wpf.Ribbon 24.2.15
+nuget DevExpress.Wpf.RichEdit 24.2.15
+nuget DevExpress.Wpf.SchedulingReporting 24.2.15
+nuget DevExpress.Wpf.SpellChecker 24.2.15
+nuget DevExpress.Wpf.Spreadsheet 24.2.15
+nuget DevExpress.Wpf.TreeMap 24.2.15
+nuget DevExpress.Wpf.TypedStyles 24.2.15
+nuget DevExpress.Mvvm 24.2.15
+nuget DevExpress.Mvvm.CodeGenerators 22.1.1
+nuget DevExpress.Wpf.ThemesLW 24.2.15
+
+
+
+
