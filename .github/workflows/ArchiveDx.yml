@@ -22,8 +22,48 @@ jobs:
 
       - name: Restore Local Tools
         run: dotnet tool restore
-        
-    
+
+      - name: Patch paket.dependencies
+        shell: pwsh
+        env:
+          PAKET_SOURCE: ${{ secrets.DXSOURCE }}
+        run: |
+          $file = "paket.dependencies"
+          $bak  = "$file.bak"
+          if (-not (Test-Path $file)) {
+            Write-Host "No $file found, skipping patch."
+            exit 0
+          }
+
+          # Backup original so we can restore later
+          Copy-Item -Force $file $bak
+
+          # Trim the secret and skip if empty
+          $sourceContent = $env:PAKET_SOURCE
+          if ([string]::IsNullOrWhiteSpace($sourceContent)) {
+            Write-Host "PAKET_SOURCE is empty; leaving file unchanged."
+            exit 0
+          }
+
+          # If the exact source content already exists in the file, do nothing
+          try {
+            $already = Select-String -Path $file -Pattern ([regex]::Escape($sourceContent)) -SimpleMatch -Quiet
+          } catch {
+            $already = $false
+          }
+          if ($already) {
+            Write-Host "Source content already present in $file; skipping insert."
+            exit 0
+          }
+
+          # Prepend the secret content (keeps original file after it)
+          $tmp = "$file.tmp"
+          $sourceContent | Out-File -FilePath $tmp -Encoding utf8
+          "" | Out-File -FilePath $tmp -Encoding utf8 -Append
+          Get-Content -Raw -Path $file | Out-File -FilePath $tmp -Encoding utf8 -Append
+          Move-Item -Force $tmp $file
+          Write-Host "Inserted source from secret into top of $file (backup at $bak)."
+
       - name: Run Paket Update
         id: paket
         run: dotnet paket update
