@@ -49,6 +49,7 @@
     <PackageReference Include="DevExpress.Wpf.Controls" />
     <PackageReference Include="DevExpress.Wpf.Core" />
     <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark" />
  
   </ItemGroup>
   </Project>
