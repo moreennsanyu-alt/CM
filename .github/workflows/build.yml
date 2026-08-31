@@ -41,7 +41,7 @@ jobs:
           Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaveActive" -Value 0
           
       - name: Run Fallout
-        run: dotnet run --project ./.build/_build.csproj
+        run: ./build.ps1
         env:
           NuGetApiKey: ${{ secrets.NUGETAPIKEY }}
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
