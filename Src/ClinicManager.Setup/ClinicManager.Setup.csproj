@@ -32,7 +32,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cd .\&#xD;\nset ide=true\&#xD;\n\"$(TargetPath)\"" />
+    <Exec Command="cd .&#xD;&#xA;set ide=true&#xD;&#xA;&quot;$(TargetPath)&quot;" />
   </Target>
   <Target Name="PublishBeforeBuild" BeforeTargets="CoreCompile">
     <MSBuild Projects="..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" Targets="Publish" Properties="Configuration=$(Configuration);\&#xD;\n                         PublishDir=$(DesktopPu[...]" />
