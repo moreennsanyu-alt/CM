@@ -11,7 +11,6 @@
     <PackageReference Include="Prism.DryIoc" />
 
     <PackageReference Include="Syncfusion.Licensing" />
-    <PackageReference Include="Syncfusion.Core" />
     <PackageReference Include="Syncfusion.Shared.WPF" />
     
     <!-- Document Processing & Viewers -->
@@ -37,7 +36,6 @@
     <PackageReference Include="Syncfusion.SfPivotGrid.WPF" />
     <PackageReference Include="Syncfusion.SfDataPager.WPF" />
     <PackageReference Include="Syncfusion.Data.WPF" />
-    <PackageReference Include="Syncfusion.DataSource.Portable" />
     
     <!-- Charts & Visualization -->
     <PackageReference Include="Syncfusion.SfChart.WPF" />
