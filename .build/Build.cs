@@ -210,7 +210,7 @@ class Build : FalloutBuild
                     (settings, v) => settings
                         .SetProjectFile(v.project)
                         .SetFramework(v.framework)
-                        .SetProperty("RunWorkingDirectory", ArtifactsDirectory / "bin" / "ClinicManager.Win" / "debug_win-x64" )
+                        //.SetProperty("RunWorkingDirectory", ArtifactsDirectory / "bin" / "ClinicManager.Win" / "debug_win-x64" )
 						.SetProcessAdditionalArguments(
                             "--",
 							"--coverage",
