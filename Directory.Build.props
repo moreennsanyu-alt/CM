@@ -6,6 +6,11 @@
     <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
+    <PublishDir>$(ArtifactsPath)\publish</PublishDir>
+    <DesktopPublishDir>$(PublishDir)\desktop</DesktopPublishDir>
+    <InstallersPath>$(ArtifactsPath)\installers</InstallersPath>
+    <Configurations>Debug;Release;E2ETests;CI</Configurations>
+    <UseProjectNamespaceForGitVersionInformation>true</UseProjectNamespaceForGitVersionInformation>
   </PropertyGroup>
 
 </Project>
