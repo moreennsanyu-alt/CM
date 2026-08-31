@@ -125,7 +125,6 @@
     <PackageVersion Include="Syncfusion.SfPivotGrid.WPF" Version="$(SyncfusionVersion)" />
     <PackageVersion Include="Syncfusion.SfDataPager.WPF" Version="$(SyncfusionVersion)" />
     <PackageVersion Include="Syncfusion.Data.WPF" Version="$(SyncfusionVersion)" />
-    <PackageVersion Include="Syncfusion.DataSource.Portable" Version="$(SyncfusionVersion)" />
     
     <!-- ========================================
          CHARTS & VISUALIZATION
