@@ -102,20 +102,12 @@ jobs:
           
           # Access the environment variable using $env:
           & 7z a -p"$env:ZIP_PWD" -v50m "$packageName" $($filesToZip.FullName) -y
-      
-      - name: Debug - show changes
+      - name: Git Add Zipped Packages
         shell: pwsh
         run: |
-          Write-Host "=== git status ==="
+          git add -f lib/packages
           git status --untracked-files=all
-
-          Write-Host "=== files on disk under lib/packages ==="
-          if (Test-Path "lib/packages") {
-            Get-ChildItem -Path "lib/packages" -Recurse | ForEach-Object { Write-Host $_.FullName }
-          } else {
-            Write-Host "lib/packages does not exist"
-          }
-        
+  
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
