@@ -67,13 +67,25 @@ jobs:
       - name: Run Paket Update
         id: paket
         run: dotnet paket update
+        
+      - name: restore paket.dependencies
+        shell: pwsh
+        run: |
+          $file = "paket.dependencies"
+          $bak  = "$file.bak"
+          if (Test-Path $bak) {
+            Move-Item -Force $bak $file
+            Write-Host "Restored original $file from backup."
+          } else {
+            Write-Host "No backup ($bak) found; nothing to restore."
+          }
           
       - name: Zip DevExpress Packages
         shell: pwsh
         env:
           ZIP_PWD: ${{ secrets.DXPASS }}
         run: |
-          $outputDir = "lib/packages"
+          $outputDir = "./lib/packages"
           $packageName = Join-Path $outputDir "dx.zip"
     
           $filesToZip = Get-ChildItem -Path "packages" -Filter "devexpress*.nupkg" -Recurse
