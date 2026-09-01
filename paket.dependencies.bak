@@ -1,5 +1,3 @@
-source https://nuget.devexpress.com/88luCgoeuPFTrDrTDcc6zKg22U2cVcTm3vdKCv88I7PHF9St6i/api
-
 source https://api.nuget.org/v3/index.json
 
 storage: packages
@@ -50,7 +48,6 @@ nuget DevExpress.Wpf.TypedStyles 24.2.15
 nuget DevExpress.Mvvm 24.2.15
 nuget DevExpress.Mvvm.CodeGenerators 22.1.1
 nuget DevExpress.Wpf.ThemesLW 24.2.15
-
 
 
 
