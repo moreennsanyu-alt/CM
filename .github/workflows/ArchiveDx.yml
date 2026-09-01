@@ -85,7 +85,7 @@ jobs:
         env:
           ZIP_PWD: ${{ secrets.DXPASS }}
         run: |
-          $outputDir = "./lib/packages"
+          $outputDir = "lib/packages"
           $packageName = Join-Path $outputDir "dx.zip"
     
           $filesToZip = Get-ChildItem -Path "packages" -Filter "devexpress*.nupkg" -Recurse
