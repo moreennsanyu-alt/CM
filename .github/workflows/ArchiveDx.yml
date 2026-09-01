@@ -101,7 +101,10 @@ jobs:
           
           # Access the environment variable using $env:
           & 7z a -p"$env:ZIP_PWD" -v50m "$packageName" $($filesToZip.FullName) -y
-     
+      - name: Debug - show changes
+        shell: pwsh
+        run: git status 
+        
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
