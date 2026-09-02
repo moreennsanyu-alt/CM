@@ -11,6 +11,7 @@ global using OperatingSystem = FlaUI.Core.Tools.OperatingSystem;
 global using ClinicManager.E2E.Tests.Core;
 global using ClinicManager.E2E.Tests.Core.Controls;
 global using ClinicManager.E2E.Tests.Core.SystemViews;
+global using static ThisAssembly.Constants;
 
 
 
