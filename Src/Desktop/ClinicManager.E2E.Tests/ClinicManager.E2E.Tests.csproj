@@ -9,6 +9,7 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Shouldly" />
     <PackageReference Include="NUnit" />
     <PackageReference Include="NUnit.Analyzers">
       <PrivateAssets>all</PrivateAssets>
@@ -16,8 +17,10 @@
     </PackageReference>
     <PackageReference Include="NUnit3TestAdapter" />
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
-    <PackageReference Include="Moq" />
-  </ItemGroup>
+    <PackageReference Include="FlaUI.Core.Signed" />
+    <PackageReference Include="FlaUI.TestUtilities" />
+    <PackageReference Include="FlaUI.UIA3.Signed" />
+</ItemGroup>
 
   <ItemGroup>
   
