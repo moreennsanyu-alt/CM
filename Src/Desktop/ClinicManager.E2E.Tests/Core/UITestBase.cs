@@ -42,10 +42,6 @@ public static string ApplicationPath = BuildInfo.ApplicationPath;
     private static class NativeMethods
     {
         [DllImport("user32.dll", SetLastError = true)]
-        public static extern bool SetProcessDPIprotected override AutomationBase GetAutomation()
-        {
-            return new UIA3Automation();
-        }
-        Aware();
+        public static extern bool SetProcessDPIAware();
     }
 }
