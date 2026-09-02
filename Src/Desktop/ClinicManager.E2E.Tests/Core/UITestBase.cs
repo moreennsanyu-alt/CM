@@ -9,8 +9,9 @@ using System.Runtime.InteropServices;
 
 namespace ClinicManager.E2E.Tests.Core;
 
-public abstract class UITestBase : FlaUITestBase
+public  class UITestBase : FlaUITestBase
 {
+public static string ApplicationPath;
     static UITestBase()
     {
         NativeMethods.SetProcessDPIAware();
@@ -20,11 +21,31 @@ public abstract class UITestBase : FlaUITestBase
         Retry.DefaultTimeout = TimeSpan.FromSeconds(5);
         Retry.DefaultInterval = TimeSpan.FromMilliseconds(250);
     }
+    protected override AutomationBase GetAutomation()
+    {
+        return new UIA3Automation();
+    }
+
+    protected override FlaUI.Core.Application StartApplication()
+    { 
+        var startInfo = new System.Diagnostics.ProcessStartInfo
+        {
+            FileName = ApplicationPath,
+            WorkingDirectory = System.IO.Path.GetDirectoryName(ApplicationPath),
+            UseShellExecute = false
+        };
+
+        return FlaUI.Core.Application.Launch(startInfo);
+  }  
 
 
     private static class NativeMethods
     {
         [DllImport("user32.dll", SetLastError = true)]
-        public static extern bool SetProcessDPIAware();
+        public static extern bool SetProcessDPIprotected override AutomationBase GetAutomation()
+        {
+            return new UIA3Automation();
+        }
+        Aware();
     }
 }
