@@ -1,16 +1,11 @@
 using NUnit.Framework;
 
-namespace YourProject.Tests
+namespace ClinicManager.E2E.Tests
 {
     [TestFixture]
-    public class EmptyTests
+    public class EmptyTests : UITestBase
     {
-        [SetUp]
-        public void Setup()
-        {
-            // Code here runs before each test (e.g., initializing objects)
-        }
-
+    
         [Test]
         public void TestMethodName()
         {
@@ -19,12 +14,6 @@ namespace YourProject.Tests
             // Act
             
             // Assert
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            // Code here runs after each test (e.g., disposing objects)
         }
     }
   
