@@ -11,7 +11,7 @@ namespace ClinicManager.E2E.Tests.Core;
 
 public  class UITestBase : FlaUITestBase
 {
-public static string ApplicationPath;
+public static string ApplicationPath = BuildInfo.ApplicationPath;
     static UITestBase()
     {
         NativeMethods.SetProcessDPIAware();
