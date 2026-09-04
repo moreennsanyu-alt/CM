@@ -76,7 +76,7 @@ namespace ClinicManager.E2E.Tests.Core
             Path.Combine(
                 TestContext.CurrentContext.WorkDirectory,
                 "Media",
-                SanitizeFileNameLocal(TestContext.CurrentContext.Test.Name),
+                SanitizeFileName(TestContext.CurrentContext.Test.Name),
                 _testDateTime);
 
                 public static string ApplicationPath = BuildInfo.ApplicationPath;
