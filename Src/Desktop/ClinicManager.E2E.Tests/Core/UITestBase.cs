@@ -8,6 +8,7 @@ using FlaUI.Core.Tools;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using FlaUI.TestUtilities;
+using System.Runtime.InteropServices;
 
 namespace ClinicManager.E2E.Tests.Core
 {
@@ -71,7 +72,7 @@ namespace ClinicManager.E2E.Tests.Core
         /// Path of the directory for the screenshots and videos for the tests.
         /// Defaults to c:\temp\testsmedia.
         /// </summary>
-        protected override string TestsMediaPath =>
+        public  string TestsMediaPath =>
             Path.Combine(
                 TestContext.CurrentContext.WorkDirectory,
                 "Media",
