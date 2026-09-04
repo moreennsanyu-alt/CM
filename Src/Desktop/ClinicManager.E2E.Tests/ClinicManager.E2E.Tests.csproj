@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Constant Include="BuildInfo.ApplicationPath" Value="$(ArtifactsPath)bin\ClinicManager.Win\debug_win-x64\ClinicMgr.exe" />
+    <Constant Include="BuildInfo.ApplicationPath" Value="$(ArtifactsPath)\bin\ClinicManager.Win\debug_win-x64\ClinicMgr.exe" />
   </ItemGroup>
 
 
