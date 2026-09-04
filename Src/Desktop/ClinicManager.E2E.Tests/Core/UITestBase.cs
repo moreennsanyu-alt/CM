@@ -9,6 +9,7 @@ using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using FlaUI.TestUtilities;
 using System.Runtime.InteropServices;
+using System.Globalization;
 
 namespace ClinicManager.E2E.Tests.Core
 {
