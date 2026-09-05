@@ -6,6 +6,8 @@ global using FlaUI.UIA3;
 global using FlaUI.Core.AutomationElements;
 global using FlaUI.Core.WindowsAPI;
 global using FlaUI.TestUtilities;
+global using FlaUI.Core.Definitions;
+
 global using NUnit.Framework;
 global using OperatingSystem = FlaUI.Core.Tools.OperatingSystem;
 global using ClinicManager.E2E.Tests.Core;
