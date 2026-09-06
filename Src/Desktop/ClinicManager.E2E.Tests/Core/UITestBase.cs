@@ -323,6 +323,19 @@ namespace ClinicManager.E2E.Tests.Core
             return Path.Combine(TestsMediaPath, imageName);
         }
 
+        public TWindow GetWindow<TWindow>(string automationId) where TWindow : Window
+        {
+            var window = WindowFinder.FindWindowById(
+                                        Automation,
+                                        automationId,
+                                        timeout: TimeSpan.FromSeconds(15),
+                                        pollInterval: TimeSpan.FromMilliseconds(300));     
+            return window;
+        }
+
+        public LoginWindow GetLoginWindow()
+                   => GetWindow<LoginWindow>("LoginWindow"); 
+
         private static class NativeMethods
         {
             [DllImport("user32.dll", SetLastError = true)]
