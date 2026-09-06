@@ -9,12 +9,21 @@ namespace ClinicManager.E2E.Tests
         [Test]
         public void TestMethodName()
         {
-            // Arrange
+            var loginWindow = GetWindow("LoginWindow");
             
-            // Act
             
-            // Assert
+            
         }
+
+        
+        public TWindow GetWindow<TWindow>(string automationId) where TWindow : Window
+        {
+            var window = WindowFinder.FindWindowById(
+                                        Automation,
+                                        automationId,
+                                        timeout: TimeSpan.FromSeconds(15),
+                                        pollInterval: TimeSpan.FromMilliseconds(300));     
+            return window;
     }
   
 }
