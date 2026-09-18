@@ -5,7 +5,7 @@ using Prism.Services.Dialogs;
 
 namespace ClinicManager.Win.Features.Authentication.ViewModels;
 
-public sealed class LoginViewModel : BindableBase, IDialogAware
+public partial sealed class LoginViewModel : BindableBase, IDialogAware
 {
     private readonly IAuthenticationService _authenticationService;
 
