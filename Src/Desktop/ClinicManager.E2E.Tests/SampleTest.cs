@@ -24,6 +24,6 @@ namespace ClinicManager.E2E.Tests
                                         timeout: TimeSpan.FromSeconds(15),
                                         pollInterval: TimeSpan.FromMilliseconds(300));     
             return window;
+        }
     }
-  
 }
