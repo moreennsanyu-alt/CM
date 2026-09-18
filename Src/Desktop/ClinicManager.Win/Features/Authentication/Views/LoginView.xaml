@@ -15,10 +15,10 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Sign in to Clinic Manager" FontSize="22" FontWeight="SemiBold" Margin="0,0,0,24" />
-        <TextBlock Grid.Row="1" Text="Username" />
-        <TextBox Grid.Row="1" Margin="0,22,0,12" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Grid.Row="1" Text="Username"/>
+        <TextBox Grid.Row="1" Margin="0,22,0,12" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" AutomationProperties.AutomationId="UsernameTextBox" />
         <TextBlock Grid.Row="2" Text="Password" />
-        <PasswordBox Grid.Row="2" Margin="0,22,0,12" PasswordChanged="PasswordBox_OnPasswordChanged" />
+        <PasswordBox Grid.Row="2" Margin="0,22,0,12" PasswordChanged="PasswordBox_OnPasswordChanged" AutomationProperties.AutomationId="PasswordTextBox"/>
         <TextBlock Grid.Row="3" Text="{Binding StatusMessage}" Foreground="Firebrick" Margin="0,0,0,12" />
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
