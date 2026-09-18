@@ -323,14 +323,14 @@ namespace ClinicManager.E2E.Tests.Core
             return Path.Combine(TestsMediaPath, imageName);
         }
 
-        public TWindow GetWindow<TWindow>(string automationId) where TWindow : Window
+        public TWindow GetWindow<TWindow>(string automationId) where TWindow : FlaUI.Core.AutomationElements.Window
         {
             var window = WindowFinder.FindWindowById(
                                         Automation,
                                         automationId,
                                         timeout: TimeSpan.FromSeconds(15),
                                         pollInterval: TimeSpan.FromMilliseconds(300));     
-            return window;
+            return window.As<TWindow>();
         }
 
         public LoginWindow GetLoginWindow()
