@@ -7,14 +7,30 @@ namespace ClinicManager.Win;
 
 public partial class App
 {
-    protected override Window CreateShell() => Container.Resolve<Shell>();
+    protected override Window CreateShell() => null;
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
         containerRegistry.Register<Shell>();
         containerRegistry.Register<ShellViewModel>();
     }
+    
+    private Shell? _shell;
 
+    protected override Window CreateShell()
+    {
+        _shell = Container.Resolve<Shell>();
+        return _shell;
+    }
+    
+    protected override void InitializeShell()
+    {
+        if (_shell is null)
+            throw new InvalidOperationException("The shell has not been created.");
+
+        Current.MainWindow = _shell;
+        ShowLoginWindow();
+}
     void ShowLoginWindow()
     {
         LoginViewModel loginViewModel = new LoginViewModel(LoginAction);
@@ -37,8 +53,8 @@ public partial class App
         var authService = Container.Resolve<IAuthenticationService>();
         LoginResult result = await authService.LoginAsync(login, password);
         if (result.IsSuccess()) {
-            Shell shellWindow = Container.Resolve<Shell>();
-            shellWindow.Show();
+            _shell.Show();
+            _shell.Activate();
         }
 
         return result.ToDisplayMessage();
