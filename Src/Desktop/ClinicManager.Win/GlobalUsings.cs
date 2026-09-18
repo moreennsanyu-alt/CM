@@ -28,7 +28,10 @@ global using Prism.Services.Dialogs;
 global using DelegateCommand = Prism.Commands.DelegateCommand;
 global using BindableBase = Prism.Mvvm.BindableBase;
 
-
+global using ClinicManager.Win.Features.Authentication.ViewModels;
+global using ClinicManager.Win.Features.Authentication;
+global using ClinicManager.Win.Features.Authentication.Views;
+global using ClinicManager.Win.Features.Authentication.Services;
 
 global using DevExpress.Xpf.Core;
 global using DevExpress.Xpf.Editors;
