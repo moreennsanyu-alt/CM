@@ -24,7 +24,7 @@ public static class LoginResultExtensions
 {
     public static string ToDisplayMessage(this LoginResult result) => result switch
     {
-        LoginResult.Success => "Login successful.",
+        LoginResult.Success => "",
         LoginResult.InvalidCredentials => "Invalid username or password.",
         LoginResult.AccountLocked => "Your account is locked. Please contact support.",
         LoginResult.AccountDisabled => "Your account has been disabled.",
