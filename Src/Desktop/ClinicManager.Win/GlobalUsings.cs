@@ -13,6 +13,11 @@ global using System.Windows.Media.Imaging;
 global using System.Windows.Navigation;
 global using System.Windows.Resources;
 
+// GlobalUsings.cs
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Input;
+global using CommunityToolkit.Mvvm.Messaging;
+
 global using Prism.Commands;
 global using Prism.Events;
 global using Prism.Ioc;
