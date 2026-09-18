@@ -51,6 +51,8 @@
     <PackageReference Include="DevExpress.Wpf.Core" />
     <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
     <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark" />
- 
+    
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+   
   </ItemGroup>
   </Project>
