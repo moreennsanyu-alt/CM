@@ -21,6 +21,8 @@ global using Prism.Modularity;
 global using Prism.Regions;
 global using Prism.Services.Dialogs;
 
+global using DialogResult = Prism.Services.Dialogs.DialogResult;
+
 global using Button = System.Windows.Controls.Button;
 global using CheckBox = System.Windows.Controls.CheckBox;
 global using ComboBox = System.Windows.Controls.ComboBox;
