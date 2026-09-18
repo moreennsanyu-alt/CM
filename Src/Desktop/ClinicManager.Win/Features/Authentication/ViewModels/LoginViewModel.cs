@@ -5,67 +5,34 @@ using Prism.Services.Dialogs;
 
 namespace ClinicManager.Win.Features.Authentication.ViewModels;
 
-public sealed partial class LoginViewModel : ObservableObject, IDialogAware
+[GenerateViewModel(ImplementISupportServices = true)]
+public partial class LoginViewModel(Func<string, string, Task<string>> loginFunction) 
 {
-    private readonly IAuthenticationService _authenticationService;
+    [GenerateProperty]
+    string username = "Admin";
 
-    [ObservableProperty]
-    private string _username = string.Empty;
-    
-    [ObservableProperty]
-    private string _password = string.Empty;
-     
-    [ObservableProperty]
-    private string _statusMessage = string.Empty;
-    
-    [ObservableProperty]
-    [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
-    private bool _isBusy;
+    [GenerateProperty]
+    string password = "123";
 
-    public LoginViewModel(IAuthenticationService authenticationService)
+    [GenerateProperty]
+    string errorMessage;
+
+    public bool IsAuthSuccess { get; set; }
+
+    Func<string, string, Task<string>> LoginFunction = loginFunction;
+
+    ICurrentWindowService CurrentWindowService => GetRequiredService<ICurrentWindowService>();
+
+    [GenerateCommand]
+    async Task Login()
     {
-        _authenticationService = authenticationService;
+        ErrorMessage = await LoginFunction(Username, Password);
+        if (!string.IsNullOrEmpty(ErrorMessage))
+            return;
+        IsAuthSuccess = true;
+        CurrentWindowService.Close();
     }
 
-    [ObservableProperty]
-    private string title = "Sign in";
-    
-    public event Action<IDialogResult>? RequestClose;
+    bool CanLogin() => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
 
-    public bool CanCloseDialog() => !IsBusy;
-    public void OnDialogOpened(IDialogParameters parameters) { }
-    public void OnDialogClosed() { }
-
-    [RelayCommand(CanExecute = nameof(CanLogin))]
-    private async Task LoginAsync()
-    {
-        IsBusy = true;
-        StatusMessage = string.Empty;
-
-        try
-        {
-            var result = await _authenticationService.LoginAsync(Username, Password);
-            switch (result)
-            {
-                case LoginResult.Success:
-                    RequestClose?.Invoke(new DialogResult(ButtonResult.OK));
-                    break;
-                case LoginResult.InvalidCredentials:
-                    StatusMessage = "Invalid username or password.";
-                    break;
-                case LoginResult.NetworkError:
-                    StatusMessage = "A network error occurred. Please try again.";
-                    break;
-            }
-        }
-        finally
-        {
-            IsBusy = false;
-        }
-    }
-
-    private bool CanLogin() => !IsBusy;
-
-    [RelayCommand]
-    private void Cancel() => RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel));
 }
