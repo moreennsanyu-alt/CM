@@ -5,7 +5,7 @@ public class LoginTests : UITestBase
     [Test]
     public void Login_WithValidCredentials_ShouldCloseLoginWindow()
     { 
-        LoginWindow _loginWindow GetLoginWindow();
+        LoginWindow _loginWindow = GetLoginWindow();
         
         _loginWindow.UsernameTextBox.Enter("testuser");
         _loginWindow.PasswordTextBox.Enter("P@ssw0rd123");
