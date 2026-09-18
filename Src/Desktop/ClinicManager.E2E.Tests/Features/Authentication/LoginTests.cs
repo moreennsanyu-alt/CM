@@ -21,7 +21,7 @@ public class LoginTests : UITestBase
     [Test]
     public void Login_WithInvalidCredentials_ShouldShowFailedLoginStatus()
     {
-        LoginWindow _loginWindow GetLoginWindow();
+        LoginWindow _loginWindow = GetLoginWindow();
         _loginWindow.UsernameTextBox.Enter("wronguser");
         _loginWindow.PasswordTextBox.Enter("wrongpass");
         _loginWindow.LoginButton.Invoke();
@@ -38,7 +38,7 @@ public class LoginTests : UITestBase
     public void Login_WithNetworkProblem_ShouldShowNetworkErrorStatus()
     {
         // Assumes test environment simulates network failure (e.g. server down/mocked)
-        LoginWindow _loginWindow GetLoginWindow();
+        LoginWindow _loginWindow  = GetLoginWindow();
         _loginWindow.UsernameTextBox.Enter("testuser");
         _loginWindow.PasswordTextBox.Enter("P@ssw0rd123");
         _loginWindow.LoginButton.Invoke();
@@ -54,7 +54,7 @@ public class LoginTests : UITestBase
     [Test]
     public void CancelButton_ShouldCloseLoginWindow()
     {
-        LoginWindow _loginWindow GetLoginWindow();
+        LoginWindow _loginWindow  = GetLoginWindow();
         _loginWindow.CancelButton.Invoke();
 
         var closed = Retry.WhileFalse(() => _loginWindow.IsOffscreen,
