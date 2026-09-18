@@ -5,7 +5,7 @@ using Prism.Services.Dialogs;
 
 namespace ClinicManager.Win.Features.Authentication.ViewModels;
 
-public sealed partial class LoginViewModel : BindableBase, IDialogAware
+public sealed partial class LoginViewModel : ObservableObject, IDialogAware
 {
     private readonly IAuthenticationService _authenticationService;
 
@@ -28,7 +28,7 @@ public sealed partial class LoginViewModel : BindableBase, IDialogAware
     }
 
     [ObservableProperty]
-    string title => "Sign in";
+    private string title = "Sign in";
     
     public event Action<IDialogResult>? RequestClose;
 
