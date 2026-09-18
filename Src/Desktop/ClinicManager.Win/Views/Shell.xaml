@@ -3,12 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
         AutomationProperties.AutomationId="ShellWindow"
+        prism:ViewModelLocator.AutoWireViewModel="True"
         Title="Clinic Manager" Height="720" Width="1280"
         WindowStartupLocation="CenterScreen">
     <DockPanel>
         <Menu DockPanel.Dock="Top" prism:RegionManager.RegionName="MenuRegion">
             <MenuItem Header="_Session">
-                <MenuItem Header="_Log out" Click="Logout_OnClick" AutomationProperties.AutomationId="LogoutButton" />
+                <MenuItem Header="_Log out"
+                          Command="{Binding LogoutCommand}"
+                          AutomationProperties.AutomationId="LogoutButton" />
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom" prism:RegionManager.RegionName="StatusBarRegion" />

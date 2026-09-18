@@ -13,6 +13,14 @@ global using System.Windows.Media.Imaging;
 global using System.Windows.Navigation;
 global using System.Windows.Resources;
 
+global using Prism.Commands;
+global using Prism.Events;
+global using Prism.Ioc;
+global using Prism.Mvvm;
+global using Prism.Modularity;
+global using Prism.Regions;
+global using Prism.Services.Dialogs;
+
 global using Button = System.Windows.Controls.Button;
 global using CheckBox = System.Windows.Controls.CheckBox;
 global using ComboBox = System.Windows.Controls.ComboBox;

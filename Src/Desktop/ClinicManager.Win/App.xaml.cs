@@ -1,5 +1,4 @@
-using System.Windows;
-using ClinicManager.Win.Features.Authentication.Views;
+using ClinicManager.Win.ViewModels;
 using ClinicManager.Win.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -13,6 +12,7 @@ public partial class App
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
         containerRegistry.Register<Shell>();
+        containerRegistry.Register<ShellViewModel>();
     }
 
     protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
