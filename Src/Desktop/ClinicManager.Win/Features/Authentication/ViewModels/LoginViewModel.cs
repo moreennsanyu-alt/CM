@@ -34,7 +34,7 @@ public partial class LoginViewModel(Func<string, string, Task<string>> loginFunc
     }
 
     [GenerateCommand]
-    async Task Login()
+    async Task Cancel()
     {
         IsAuthSuccess = false;
         CurrentWindowService.Close();
