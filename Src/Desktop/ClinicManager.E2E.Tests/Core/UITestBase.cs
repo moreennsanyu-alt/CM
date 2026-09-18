@@ -23,12 +23,12 @@ namespace ClinicManager.E2E.Tests.Core
         /// <summary>
         /// Member which holds the current video recorder.
         /// </summary>
-        private VideoRecorder _recorder;
+        private VideoRecorder _recorder = null!;
 
         /// <summary>
         /// The name of the current test method. Used for the video recorder.
         /// </summary>
-        private string _testMethodName;
+        private string _testMethodName = null!;
 
         /// <summary>
         /// Instance of the current used automation object.
@@ -38,7 +38,7 @@ namespace ClinicManager.E2E.Tests.Core
         /// <summary>
         /// Instance of the current running application.
         /// </summary>
-        protected Application Application { get; set; }
+        protected Application Application { get; set; } = null!;
 
         /// <summary>
         /// Specifies the starting mode of the application to test.
