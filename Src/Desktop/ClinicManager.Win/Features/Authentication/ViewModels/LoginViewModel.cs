@@ -33,6 +33,13 @@ public partial class LoginViewModel(Func<string, string, Task<string>> loginFunc
         CurrentWindowService.Close();
     }
 
+    [GenerateCommand]
+    async Task Login()
+    {
+        IsAuthSuccess = false;
+        CurrentWindowService.Close();
+    }
+
     bool CanLogin() => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
 
 }
