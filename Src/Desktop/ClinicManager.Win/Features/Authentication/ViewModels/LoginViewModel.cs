@@ -8,53 +8,40 @@ namespace ClinicManager.Win.Features.Authentication.ViewModels;
 public sealed class LoginViewModel : BindableBase, IDialogAware
 {
     private readonly IAuthenticationService _authenticationService;
+
+    [ObservableProperty]
     private string _username = string.Empty;
+    
+    [ObservableProperty]
     private string _password = string.Empty;
+     
+    [ObservableProperty]
     private string _statusMessage = string.Empty;
+    
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(LoginCommand))]
     private bool _isBusy;
 
     public LoginViewModel(IAuthenticationService authenticationService)
     {
         _authenticationService = authenticationService;
-        LoginCommand = new DelegateCommand(async () => await LoginAsync(), () => !IsBusy)
-            .ObservesProperty(() => IsBusy);
         CancelCommand = new DelegateCommand(Cancel);
     }
 
-    public string Username
-    {
-        get => _username;
-        set => SetProperty(ref _username, value);
-    }
+    
 
-    public string Password
-    {
-        get => _password;
-        set => SetProperty(ref _password, value);
-    }
-
-    public string StatusMessage
-    {
-        get => _statusMessage;
-        private set => SetProperty(ref _statusMessage, value);
-    }
-
-    public bool IsBusy
-    {
-        get => _isBusy;
-        private set => SetProperty(ref _isBusy, value);
-    }
-
-    public DelegateCommand LoginCommand { get; }
     public DelegateCommand CancelCommand { get; }
 
-    public string Title => "Sign in";
+    [ObservableProperty]
+    public string title => "Sign in";
+    
     public event Action<IDialogResult>? RequestClose;
 
     public bool CanCloseDialog() => !IsBusy;
     public void OnDialogOpened(IDialogParameters parameters) { }
     public void OnDialogClosed() { }
 
+    [RelayCommand(CanExecute = nameof(CanLogin))]
     private async Task LoginAsync()
     {
         IsBusy = true;
@@ -81,6 +68,8 @@ public sealed class LoginViewModel : BindableBase, IDialogAware
             IsBusy = false;
         }
     }
+
+    private bool CanLogin() => !IsBusy
 
     private void Cancel() => RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel));
 }
