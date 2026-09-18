@@ -26,6 +26,25 @@ global using Prism.Modularity;
 global using Prism.Regions;
 global using Prism.Services.Dialogs;
 
+global using DevExpress.Xpf.Core;
+global using DevExpress.Xpf.Editors;
+global using DevExpress.Xpf.LayoutControl;
+global using DevExpress.Xpf.Docking;
+global using DevExpress.Xpf.Bars;
+global using DevExpress.Xpf.Ribbon;
+global using DevExpress.Xpf.Grid;
+global using DevExpress.Xpf.PropertyGrid;
+global using DevExpress.Xpf.PivotGrid;
+global using DevExpress.Xpf.Scheduling;
+global using DevExpress.Xpf.Charts;
+global using DevExpress.Xpf.Gauges;
+global using DevExpress.Xpf.RichEdit;
+global using DevExpress.Xpf.PdfViewer;
+global using DevExpress.Xpf.Printing;
+global using DevExpress.Mvvm;
+global using DevExpress.Mvvm.DataAnnotations;
+global using DevExpress.Mvvm.CodeGenerators;
+
 global using DialogResult = Prism.Services.Dialogs.DialogResult;
 global using Application = System.Windows.Application;
 global using Button = System.Windows.Controls.Button;
