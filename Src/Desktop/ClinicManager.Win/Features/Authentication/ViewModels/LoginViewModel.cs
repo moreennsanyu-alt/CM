@@ -64,7 +64,7 @@ public sealed class LoginViewModel : BindableBase, IDialogAware
         }
     }
 
-    private bool CanLogin() => !IsBusy
+    private bool CanLogin() => !IsBusy;
 
     [RelayCommand]
     private void Cancel() => RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel));
