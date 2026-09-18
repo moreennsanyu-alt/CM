@@ -25,12 +25,7 @@ public sealed class LoginViewModel : BindableBase, IDialogAware
     public LoginViewModel(IAuthenticationService authenticationService)
     {
         _authenticationService = authenticationService;
-        CancelCommand = new DelegateCommand(Cancel);
     }
-
-    
-
-    public DelegateCommand CancelCommand { get; }
 
     [ObservableProperty]
     public string title => "Sign in";
@@ -71,5 +66,6 @@ public sealed class LoginViewModel : BindableBase, IDialogAware
 
     private bool CanLogin() => !IsBusy
 
+    [RelayCommand]
     private void Cancel() => RequestClose?.Invoke(new DialogResult(ButtonResult.Cancel));
 }
