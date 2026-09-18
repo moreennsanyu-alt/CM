@@ -25,6 +25,10 @@ global using Prism.Mvvm;
 global using Prism.Modularity;
 global using Prism.Regions;
 global using Prism.Services.Dialogs;
+global using DelegateCommand = Prism.Commands.DelegateCommand;
+global using BindableBase = Prism.Mvvm.BindableBase;
+
+
 
 global using DevExpress.Xpf.Core;
 global using DevExpress.Xpf.Editors;
