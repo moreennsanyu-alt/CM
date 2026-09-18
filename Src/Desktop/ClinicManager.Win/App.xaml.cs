@@ -7,8 +7,7 @@ namespace ClinicManager.Win;
 
 public partial class App
 {
-    protected override Window CreateShell() => null;
-
+    
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
         containerRegistry.Register<Shell>();
@@ -23,12 +22,10 @@ public partial class App
         return _shell;
     }
     
-    protected override void InitializeShell()
+    protected override void OnInitialized()
     {
         if (_shell is null)
             throw new InvalidOperationException("The shell has not been created.");
-
-        Current.MainWindow = _shell;
         ShowLoginWindow();
 }
     void ShowLoginWindow()
