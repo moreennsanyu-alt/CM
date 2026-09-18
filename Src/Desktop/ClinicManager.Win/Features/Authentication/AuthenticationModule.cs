@@ -1,22 +1,43 @@
-using ClinicManager.Core.Constants;
+using ClinicManager.Win.Features.Authentication.Services;
+using ClinicManager.Win.Features.Authentication.ViewModels;
+using ClinicManager.Win.Features.Authentication.Views;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Services.Dialogs;
 
 namespace ClinicManager.Win.Features.Authentication;
 
-public class AuthenticationModule : IModule
+public sealed class AuthenticationModule : IModule
 {
     public void RegisterTypes(IContainerRegistry containerRegistry)
     {
-        // Example:
-        // containerRegistry.RegisterForNavigation<AuthenticationView, AuthenticationViewModel>();
-        // containerRegistry.Register<IAuthenticationService, AuthenticationService>();
+        containerRegistry.RegisterSingleton<IAuthenticationService, AlwaysSuccessfulAuthenticationService>();
+        containerRegistry.RegisterDialogWindow<LoginDialogWindow>();
+        containerRegistry.RegisterDialog<LoginView, LoginViewModel>("LoginDialog");
     }
 
     public void OnInitialized(IContainerProvider containerProvider)
     {
-        // Example:
-        // var regionManager = containerProvider.Resolve<IRegionManager>();
-        // regionManager.RequestNavigate(RegionNames.MainRegion, nameof(AuthenticationView));
+        var authenticationService = containerProvider.Resolve<IAuthenticationService>();
+        if (authenticationService.IsLoggedIn)
+            return;
+
+        var dialogService = containerProvider.Resolve<IDialogService>();
+        var shell = System.Windows.Application.Current?.MainWindow;
+
+        dialogService.ShowDialog("LoginDialog", new DialogParameters(), result =>
+        {
+            if (result.Result != ButtonResult.OK)
+            {
+                System.Windows.Application.Current?.Shutdown();
+                return;
+            }
+
+            if (shell is not null)
+                shell.IsEnabled = true;
+        });
+
+        if (shell is not null)
+            shell.IsEnabled = false;
     }
 }
