@@ -19,7 +19,7 @@
         <TextBox Grid.Row="1" Margin="0,22,0,12" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" AutomationProperties.AutomationId="UsernameTextBox" />
         <TextBlock Grid.Row="2" Text="Password" />
         <PasswordBox Grid.Row="2" Margin="0,22,0,12" PasswordChanged="PasswordBox_OnPasswordChanged" AutomationProperties.AutomationId="PasswordTextBox"/>
-        <TextBlock Grid.Row="3" Text="{Binding StatusMessage}" Foreground="Firebrick" Margin="0,0,0,12" />
+        <TextBlock Grid.Row="3" Text="{Binding StatusMessage}" Foreground="Firebrick" Margin="0,0,0,12" AutomationProperties.AutomationId="LoginStatusLabel"/>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <Button AutomationProperties.AutomationId="CancelButton" Content="Cancel" Command="{Binding CancelCommand}" Margin="0,0,8,0" />
