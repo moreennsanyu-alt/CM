@@ -57,7 +57,7 @@ public class LoginTests : UITestBase
         LoginWindow _loginWindow  = GetLoginWindow();
         _loginWindow.CancelButton.Invoke();
 
-        var closed = Retry.WhileFalse(() => _loginWindow.IsOffscreen,
+        var closed = Retry.WhileFalse(() => _loginWindow.IsAvailable,
                 timeout: TimeSpan.FromSeconds(5),
                 interval: TimeSpan.FromMilliseconds(200)).Success;
 
