@@ -179,6 +179,9 @@ class Build : FalloutBuild
                     )
                 );
 				
+		});
+
+		
     Target UnitTests => _ => _
         .DependsOn(Compile)
         .Executes(() =>
