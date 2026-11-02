@@ -1,0 +1,56 @@
+name: E2E Video Capture
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'tests/ClinicManager.E2E.Tests/**'
+      - '.github/workflows/e2e-video.yml'
+
+jobs:
+  e2e-video:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Run E2E video test
+        shell: pwsh
+        run: |
+          dotnet run --project tests/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj -- --filter "E2EPlaceholderTest"
+
+      - name: Zip recorded video
+        if: always()
+        shell: pwsh
+        run: |
+          $videoDirectory = "tests/ClinicManager.E2E.Tests/bin/Debug/net48/TestVideos"
+          $artifactDirectory = "artifacts"
+
+          if (Test-Path $videoDirectory) {
+            New-Item -ItemType Directory -Force -Path $artifactDirectory | Out-Null
+            $videos = Get-ChildItem -Path $videoDirectory -Filter "*.mp4" -File
+
+            if ($videos.Count -gt 0) {
+              Compress-Archive -Path "$videoDirectory/*.mp4" -DestinationPath "$artifactDirectory/e2e-videos.zip" -Force
+            }
+            else {
+              Write-Host "No .mp4 files were created in $videoDirectory"
+            }
+          }
+          else {
+            Write-Host "Video directory not found: $videoDirectory"
+          }
+
+      - name: Upload browser video artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-video-artifact
+          path: artifacts/e2e-videos.zip
+          if-no-files-found: ignore
