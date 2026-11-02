@@ -19,7 +19,7 @@ public sealed class TestRecorder : IDisposable
 
         OutputFilePath = outputFilePath;
 
-        var outputDirectory = Path.GetDirectoryName(OutputFilePath);
+        string outputDirectory = Path.GetDirectoryName(OutputFilePath);
         if (!string.IsNullOrEmpty(outputDirectory))
         {
             Directory.CreateDirectory(outputDirectory);
@@ -55,7 +55,6 @@ public sealed class TestRecorder : IDisposable
         }
         catch
         {
-            // Ignore disposal-time shutdown issues.
         }
 
         _recorder.Dispose();
