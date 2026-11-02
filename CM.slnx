@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="src/ClinicManager/ClinicManager.csproj" />
+  <Project Path="src/ClinicManager.Win/ClinicManager.Win.csproj" />
+  <Project Path="src/ClinicManager.Server/ClinicManager.Server.csproj" />
+  <Project Path="tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
+  <Project Path="tests/ClinicManager.Tests/ClinicManager.Tests.csproj" />
+  <Project Path="tests/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
+  <Project Path="tests/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj" />
+</Solution>
