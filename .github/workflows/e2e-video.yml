@@ -23,7 +23,7 @@ jobs:
       - name: Run E2E video test
         shell: pwsh
         run: |
-          dotnet run --project tests/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj -- --filter "E2EPlaceholderTest"
+          dotnet run --project tests/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj
 
       - name: Zip recorded video
         if: always()
