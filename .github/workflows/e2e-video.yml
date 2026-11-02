@@ -29,24 +29,20 @@ jobs:
         if: always()
         shell: pwsh
         run: |
-          $videoDirectory = "tests/ClinicManager.E2E.Tests/bin/Debug/net48/TestVideos"
+          $sourceRoot = "."
           $artifactDirectory = "artifacts"
+          $outputZip = Join-Path $artifactDirectory "e2e-videos.zip"
 
-          if (Test-Path $videoDirectory) {
-            New-Item -ItemType Directory -Force -Path $artifactDirectory | Out-Null
-            $videos = Get-ChildItem -Path $videoDirectory -Filter "*.mp4" -File
+          New-Item -ItemType Directory -Force -Path $artifactDirectory | Out-Null
 
-            if ($videos.Count -gt 0) {
-              Compress-Archive -Path "$videoDirectory/*.mp4" -DestinationPath "$artifactDirectory/e2e-videos.zip" -Force
-            }
-            else {
-              Write-Host "No .mp4 files were created in $videoDirectory"
-            }
+          $videoFiles = Get-ChildItem -Path $sourceRoot -Recurse -File -Include *.mp4, *.avi -ErrorAction SilentlyContinue
+
+          if ($videoFiles.Count -gt 0) {
+            Compress-Archive -Path $videoFiles.FullName -DestinationPath $outputZip -Force
           }
           else {
-            Write-Host "Video directory not found: $videoDirectory"
+            Write-Host "No .mp4 or .avi files were found under $sourceRoot"
           }
-
       - name: Upload browser video artifact
         if: always()
         uses: actions/upload-artifact@v4
