@@ -1,8 +1,7 @@
 using System;
 using System.Reflection;
-using Xunit.Sdk;
-using Xunit.v3;
 using Xunit;
+using Xunit.v3;
 
 namespace ClinicManager.E2E.Tests;
 
@@ -10,7 +9,7 @@ namespace ClinicManager.E2E.Tests;
 public sealed class RecordTestAttribute : BeforeAfterTestAttribute
 {
     private readonly TestSettings _settings;
-    private TestRecorder _recorder;
+    private TestRecorder? _recorder;
 
     public RecordTestAttribute()
         : this(new TestSettings())
@@ -27,15 +26,14 @@ public sealed class RecordTestAttribute : BeforeAfterTestAttribute
         _settings = settings ?? throw new ArgumentNullException(nameof(settings));
     }
 
-    public override ValueTask BeforeAsync(MethodInfo methodUnderTest)
+    public override void Before(MethodInfo methodUnderTest, IXunitTest test)
     {
         string filePath = _settings.CreateFilePath(methodUnderTest);
         _recorder = new TestRecorder(filePath);
         _recorder.Start();
-        return ValueTask.CompletedTask;
     }
 
-    public override ValueTask AfterAsync(MethodInfo methodUnderTest)
+    public override void After(MethodInfo methodUnderTest, IXunitTest test)
     {
         if (_recorder != null)
         {
@@ -43,7 +41,5 @@ public sealed class RecordTestAttribute : BeforeAfterTestAttribute
             _recorder.Dispose();
             _recorder = null;
         }
-
-        return ValueTask.CompletedTask;
     }
 }
